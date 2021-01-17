@@ -1,6 +1,6 @@
 <img src="../../imagenes/MI-LICENCIA88x31.png" style="float: left; margin-right: 10px;" />
 
-# Instalación Apache2:
+# Instalación Apache2
 
 ``apt install apache2 -y``
 
@@ -8,13 +8,13 @@
 
 ``apt install apache2-doc -y``
 
-# Comprobaciones:
+# Comprobaciones
 
-## Versión de apache instalada:
+## Versión de apache instalada
 
 ``apache2 -v``
 
-## Estado del servicio:
+## Estado del servicio
 
 ``systemctl status apache2.service``
 
@@ -24,7 +24,7 @@
 
 ![estadoServicio](/imagenes/apache2/estadoServicio.jpg)
 
-## Comprobamos desde el navegador:
+## Comprobamos desde el navegador
 
 ### Pagina principal de apache2
 
@@ -36,19 +36,19 @@
 
 ![DocumentacionLocal](/imagenes/apache2/documentacionLocal.jpg)
 
-## Procesos:
+## Procesos
 
 ``ps -aux | grep apache2 | grep -v "grep apache2"``
 
 ![procesos](/imagenes/apache2/procesos.jpg)
 
-## Módulos cargados:
+## Módulos cargados
 
 ``apachectl -M``
 
 ![modulos](/imagenes/apache2/modulosApache.jpg)
 
-## Sitios virtuales:
+## Sitios virtuales
 
 ``apachectl -S``
 
