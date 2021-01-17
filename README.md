@@ -8,7 +8,7 @@
 
 ***Mi Topológia de red***
 
-![red](/imagenes/red.jpg)
+![red](/imagenes/red.png)
 
 ## [1.- Instalación y Comprobaciones.](./apache2/instalacionYComprobaciones)
 <!-- ## [2.- Modelo Crear Usuario.](./LDIF/juan.ldif)
