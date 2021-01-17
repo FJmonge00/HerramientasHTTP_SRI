@@ -1,9 +1,13 @@
 <img src="./imagenes/MI-LICENCIA88x31.png" style="float: left; margin-right: 10px;" />
 
 # Herramientas Servicio Web
-![logo dnsmasq](/imagenes/apacheLogo.png)
+![logo apache](/imagenes/apacheLogo.png)
+
+
+
 
 ***Mi Topológia de red***
+
 ![red](/imagenes/red.jpg)
 
 ## [1.- Instalación y Comprobaciones.](./apache2/instalacionYComprobaciones)
