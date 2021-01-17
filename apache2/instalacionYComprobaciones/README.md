@@ -46,12 +46,13 @@
 
 ``apachectl -M``
 
-![modulos](/imagenes/apache2/modulosCargados.jpg)
+![modulos](/imagenes/apache2/modulosApache.jpg)
 
 ## Sitios virtuales:
 
+``apachectl -S``
+
 ![sitiosVirtuales](/imagenes/apache2/sitiosVirtuales.jpg)
 
-``apachectl -S``
 _________________________________________________
 *[Volver atrás...](../README.md)*
