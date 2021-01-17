@@ -2,6 +2,10 @@
 
 # Herramientas Servicio Web
 ![logo dnsmasq](/imagenes/apacheLogo.png)
+
+## Mi Topológia de red
+![red](/imagenes/red.jpg)
+
 ## [1.- Instalación y Comprobaciones.](./apache2/instalacionYComprobaciones)
 <!-- ## [2.- Modelo Crear Usuario.](./LDIF/juan.ldif)
 ## [3.- Modificación de usuario.](./LDIF/CambioJuan.ldif)
