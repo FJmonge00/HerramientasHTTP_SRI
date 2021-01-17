@@ -3,7 +3,7 @@
 # Herramientas Servicio Web
 ![logo dnsmasq](/imagenes/apacheLogo.png)
 
-## Mi Topológia de red
+***Mi Topológia de red***
 ![red](/imagenes/red.jpg)
 
 ## [1.- Instalación y Comprobaciones.](./apache2/instalacionYComprobaciones)
