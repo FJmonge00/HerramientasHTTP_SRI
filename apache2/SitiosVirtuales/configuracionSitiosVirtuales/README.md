@@ -30,9 +30,9 @@ Cualquier **IP** del Servidor puerto **80**:
 | Directivas Options: |
 | -- |
 | **All:** Todas las opciones excepto MultiViews. |
-| **FollowSymLinks:** Se pueden seguir los enlaces simbólicos. Si esta opción está activada, podemos a través de enlaces simbólicos, archivos que estén fuera del directorio Document Root. |
-| **Indexes:** Cuando accedemos al directorio y no se encuentra un fichero por defecto (indicado en la directiva DirectoryIndex del módulo mod_dir), por ejemplo el index.html, se muestra la lista de ficheros (esto lo realiza el módulo mod_autoindex). |
-| **MultiViews:** Permite la negociación de contenido, mediante el módulo mod_negotiation. Por ejemplo: Ofrecer una página en un determinado idioma. |
+| **FollowSymLinks:** Se pueden seguir los enlaces simbólicos. *Si esta opción está activada, podemos a través de enlaces simbólicos, archivos que estén fuera del directorio Document Root.* |
+| **Indexes:** Cuando accedemos al directorio y no se encuentra un fichero por defecto *(indicado en la directiva DirectoryIndex del módulo mod_dir), por ejemplo el index.html, se muestra la lista de ficheros (esto lo realiza el módulo mod_autoindex).* |
+| **MultiViews:** Permite la negociación de contenido, mediante el módulo mod_negotiation. *Por ejemplo: Ofrecer una página en un determinado idioma.* |
 | **SymLinksIfOwnerMatch:** Se pueden seguir enlaces simbólicos, sólo cuando el fichero destino es del mismo propietario que el enlace simbólico. |
 | **ExecCGI:** Permite ejecutar script CGI (interfaz) usando el módulo mod_cgi. |
 
