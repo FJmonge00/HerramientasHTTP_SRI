@@ -12,7 +12,7 @@
 
 ## [1.- Instalación y Comprobaciones.](./apache2/instalacionYComprobaciones)
 ## [2.- Estructura de ficheros de configuración.](./apache2/EstructuraFicherosConfiguracion)
-<!-- ## [3.- Modificación de usuario.](./LDIF/CambioJuan.ldif) -->
+## [3.- Modificación de usuario.](./apache2/Directivas)
 <!-- ## [4.- Modificación varios usuarios.](./LDIF/modificacion.ldif) -->
 <!-- ## [5.- Eliminar Campos.](./LDIF/eliminarMail.ldif) -->
 <!-- ## [6.- Preparaciones para un cliente.](./variado/preparandoCliente.md) -->
