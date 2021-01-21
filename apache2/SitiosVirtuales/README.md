@@ -21,9 +21,9 @@ Tenemos:
 **Servidores virtuales por puerto:** Cada sitio web tiene la misma IP pero un puerto distinto. Ej: 192.168.2.61:8081
 
 **Servidores virtuales por dirección IP:** Cada sitio web tiene una dirección IP diferente. (Distintas interfaces)
-
-
-
+      
+     
+     
 **Directiva DocumentRoot**
 Esta directiva indica dónde está la página web que se va mostrar cuando accedamos a ese sitio virtual.
 Podemos verlo, en ``/etc/apache2/sites-enabled/000-default.conf``:
