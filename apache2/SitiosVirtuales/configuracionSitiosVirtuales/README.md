@@ -26,9 +26,9 @@ Cualquier **IP** del Servidor puerto **80**:
 
 ![ConfigiracionBasica](../../../imagenes/apache2/directoryBasica.jpg)
 
-
+<!-- 
 | Directivas Options: |
-| -- |
+| -- | -->
 Algunas de las opciones que podemos indicar son las siguientes:
     • **All:** Todas las opciones excepto MultiViews.
     • **FollowSymLinks:** Se pueden seguir los enlaces simbólicos. Si esta opción está activada, podemos a través de enlaces simbólicos, archivos que estén fuera del directorio Document Root.
