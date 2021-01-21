@@ -40,11 +40,11 @@ Cualquier **IP** del Servidor puerto **80**:
 
 ## Configuración *Indexes*
 
-``<Directory /var/www/>``
-``        Options Indexes FollowSymLinks``
-``        AllowOverride None``
-``        Require all granted``
-``</Directory>``
+<Directory /var/www/>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+</Directory>
 
 
 _________________________________________________
