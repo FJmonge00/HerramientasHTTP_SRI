@@ -27,7 +27,7 @@ Cualquier **IP** del Servidor puerto **80**:
 ![ConfigiracionBasica](../../../imagenes/apache2/directoryBasica.jpg)
 
 
-| Directivas Options: |
+| Directivas Options |
 | -- |
 | **All:** Todas las opciones excepto MultiViews. |
 | **FollowSymLinks:** Se pueden seguir los enlaces simbólicos. *Si esta opción está activada, podemos a través de enlaces simbólicos, archivos que estén fuera del directorio Document Root.* |
@@ -36,7 +36,17 @@ Cualquier **IP** del Servidor puerto **80**:
 | **SymLinksIfOwnerMatch:** Se pueden seguir enlaces simbólicos, sólo cuando el fichero destino es del mismo propietario que el enlace simbólico. |
 | **ExecCGI:** Permite ejecutar script CGI (interfaz) usando el módulo mod_cgi. |
 
-****Podemos activar o desactivar una opción en referencia con la configuración de un directorio padre mediante el signo + o -.****
+*Podemos activar o desactivar una opción en referencia con la configuración de un directorio padre mediante el signo + o -.*
+
+## Configuración *Indexes*
+
+``<Directory /var/www/>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+</Directory>``
+
+
 _________________________________________________
 *[Volver atrás...](../README.md)*
 
