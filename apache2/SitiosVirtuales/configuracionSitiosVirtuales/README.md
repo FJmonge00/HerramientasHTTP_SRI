@@ -40,7 +40,7 @@ Cualquier **IP** del Servidor puerto **80**:
 
 ## Configuración *Indexes*
 
-```
+```Shell scripts
 <Directory /var/www/>
         Options Indexes FollowSymLinks
         AllowOverride None
