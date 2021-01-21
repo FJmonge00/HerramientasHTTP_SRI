@@ -40,23 +40,15 @@ Cualquier **IP** del Servidor puerto **80**:
 
 ## Configuración *Indexes*
 
+*AL COPIAR NO SE COPIAN LAS TABULACIONES*
 ```apache
 <Directory /var/www/>
-        Options Indexes FollowSymLinks
-        AllowOverride None
-        Require all granted
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
 </Directory>
 ```
-
-<!-- *AL COPIAR NO SE COPIAN LAS TABULACIONES*
-~~~
-<Directory /var/www/>
-        Options Indexes FollowSymLinks
-        AllowOverride None
-        Require all granted
-</Directory>
-~~~
-*AL COPIAR NO SE COPIAN LAS TABULACIONES* -->
+*AL COPIAR NO SE COPIAN LAS TABULACIONES*
 
 _________________________________________________
 *[Volver atrás...](../README.md)*
