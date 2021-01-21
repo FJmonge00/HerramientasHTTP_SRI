@@ -13,6 +13,7 @@
 **Virtual hosting o sitios virtuales:**
 Nos permite acceder a distintas páginas web depositadas en una sola máquina.
     Tenemos:
+
         **Servidores virtuales por nombre:** Con una sola IP, se accede a los sitios web por nombre o dominio.Ej: www.pagina1.org
 
         **Servidores virtuales por puerto:** Cada sitio web tiene la misma IP pero un puerto distinto. Ej: 192.168.2.61:8081
