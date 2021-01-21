@@ -1,3 +1,4 @@
+<img src="./imagenes/MI-LICENCIA88x31.png" style="float: left; margin-right: 10px;" />
 # Directivas
 
 ## Directivas de control de la conexión.
@@ -27,3 +28,5 @@ El servidor espera 5 segundos a que el cliente le haga una petición. Si no real
 **Files o FilesMatch:** Declara un contexto para un conjunto de ficheros. Son las opciones que le vamos a dar a los ficheros.
 
 *Teoría obtenida de:* [mftienda](https://github.com/mftienda)
+_________________________________________________
+*[Volver atrás...](../../README.md)*
