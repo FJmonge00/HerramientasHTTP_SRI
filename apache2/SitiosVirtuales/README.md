@@ -25,7 +25,7 @@ Podemos verlo, en ``/etc/apache2/sites-enabled/000-default.conf``:
 
 *Teoría obtenida de:* [mftienda](https://github.com/mftienda)
 
-## [1.- Configuración Sitios virtuales.](./configuracionSitiosVirtuales/)
+## [1.- Configuración sitios virtuales.](./configuracionSitiosVirtuales/)
 ## [2.- Lorem ipsun.](./apache2/EstructuraFicherosConfiguracion)
 ## [3.- Loren Ipsum.](./apache2/Directivas)
 _________________________________________________

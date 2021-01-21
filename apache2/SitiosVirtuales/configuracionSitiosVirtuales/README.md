@@ -5,4 +5,4 @@
 _________________________________________________
 *[Volver atrás...](../README.md)*
 
-*[Volver Pagina de Inicio...](/README.md)*
+*[Volver a página de inicio...](/README.md)*
