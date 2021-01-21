@@ -26,9 +26,9 @@ Cualquier **IP** del Servidor puerto **80**:
 
 ![ConfigiracionBasica](../../../imagenes/apache2/directoryBasica.jpg)
 
-**Directivas Options:**
 
-``Directiva: Options
+| **Directivas Options:** |
+Directiva: Options
 Algunas de las opciones que podemos indicar son las siguientes:
     • All: Todas las opciones excepto MultiViews.
     • FollowSymLinks: Se pueden seguir los enlaces simbólicos.
@@ -37,7 +37,7 @@ Si esta opción está activada, podemos a través de enlaces simbólicos, archiv
     • MultiViews: Permite la negociación de contenido, mediante el módulo mod_negotiation. Por ejemplo: Ofrecer una página en un determinado idioma.
     • SymLinksIfOwnerMatch: Se pueden seguir enlaces simbólicos, sólo cuando el fichero destino es del mismo propietario que el enlace simbólico.
     • ExecCGI: Permite ejecutar script CGI (interfaz) usando el módulo mod_cgi.
-Podemos activar o desactivar una opción en referencia con la configuración de un directorio padre mediante el signo + o -.``
+Podemos activar o desactivar una opción en referencia con la configuración de un directorio padre mediante el signo + o -.
 _________________________________________________
 *[Volver atrás...](../README.md)*
 
