@@ -42,13 +42,13 @@
 
 ![procesos](/imagenes/apache2/procesos.jpg)
 
-## Módulos cargados
+## Ver Módulos
 
 ``apachectl -M``
 
 ![modulos](/imagenes/apache2/modulosApache.jpg)
 
-## Sitios virtuales
+## Ver sitios virtuales
 
 ``apachectl -S``
 
