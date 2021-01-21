@@ -40,6 +40,13 @@ Cualquier **IP** del Servidor puerto **80**:
 
 ## Configuración *Indexes*
 
+```<Directory /var/www/>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+</Directory>```
+
+<!-- *AL COPIAR NO SE COPIAN LAS TABULACIONES*
 ~~~
 <Directory /var/www/>
         Options Indexes FollowSymLinks
@@ -47,6 +54,7 @@ Cualquier **IP** del Servidor puerto **80**:
         Require all granted
 </Directory>
 ~~~
+*AL COPIAR NO SE COPIAN LAS TABULACIONES* -->
 
 _________________________________________________
 *[Volver atrás...](../README.md)*
