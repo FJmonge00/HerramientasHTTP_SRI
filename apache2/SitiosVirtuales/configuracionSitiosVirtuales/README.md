@@ -27,7 +27,8 @@ Cualquier **IP** del Servidor puerto **80**:
 ![ConfigiracionBasica](../../../imagenes/apache2/directoryBasica.jpg)
 
 
-| **Directivas Options:** |
+| Directivas Options: |
+
 Directiva: Options
 Algunas de las opciones que podemos indicar son las siguientes:
     • All: Todas las opciones excepto MultiViews.
