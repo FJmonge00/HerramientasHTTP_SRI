@@ -1,4 +1,4 @@
-<img src="./imagenes/MI-LICENCIA88x31.png" style="float: left; margin-right: 10px;" />
+<img src="/imagenes/MI-LICENCIA88x31.png" style="float: left; margin-right: 10px;" />
 
 # Sitios Virtuales
 
@@ -26,7 +26,7 @@ Podemos verlo, en ``/etc/apache2/sites-enabled/000-default.conf``:
 *Teoría obtenida de:* [mftienda](https://github.com/mftienda)
 
 ## [1.- Configuración Sitios virtuales.](./configuracionSitiosVirtuales/)
-## [2.- Estructura de ficheros de configuración.](./apache2/EstructuraFicherosConfiguracion)
-## [3.- Directivas.](./apache2/Directivas)
+## [2.- Lorem ipsun.](./apache2/EstructuraFicherosConfiguracion)
+## [3.- Loren Ipsum.](./apache2/Directivas)
 _________________________________________________
 *[Volver atrás...](/README.md)*
