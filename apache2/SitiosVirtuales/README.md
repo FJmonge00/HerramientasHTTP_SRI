@@ -16,11 +16,13 @@ Nos permite acceder a distintas páginas web depositadas en una sola máquina.
 
 Tenemos:
 
-   **Servidores virtuales por nombre:** Con una sola IP, se accede a los sitios web por nombre o dominio.Ej: www.pagina1.org
+**Servidores virtuales por nombre:** Con una sola IP, se accede a los sitios web por nombre o dominio.Ej: www.pagina1.org
 
-   **Servidores virtuales por puerto:** Cada sitio web tiene la misma IP pero un puerto distinto. Ej: 192.168.2.61:8081
+**Servidores virtuales por puerto:** Cada sitio web tiene la misma IP pero un puerto distinto. Ej: 192.168.2.61:8081
 
-   **Servidores virtuales por dirección IP:** Cada sitio web tiene una dirección IP diferente. (Distintas interfaces)
+**Servidores virtuales por dirección IP:** Cada sitio web tiene una dirección IP diferente. (Distintas interfaces)
+
+
 
 **Directiva DocumentRoot**
 Esta directiva indica dónde está la página web que se va mostrar cuando accedamos a ese sitio virtual.
