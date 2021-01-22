@@ -33,7 +33,9 @@ Podemos verlo, en ``/etc/apache2/sites-enabled/000-default.conf``:
 *Teoría obtenida de:* [mftienda](https://github.com/mftienda)
 
 ## [1.- Configuración sitios virtuales.](./configuracionSitiosVirtuales/)
-## [2.- Lorem ipsun.](./apache2/EstructuraFicherosConfiguracion)
-## [3.- Loren Ipsum.](./apache2/Directivas)
+## [2.- Sitios virtuales por nombre.](./configuracionPorNombre)
+## [3.- Sitios virtuales por puertos.](./configuracionPorPuerto)
+## [4.- Sitios virtuales por IPs.](./configuracionPorIps)
+## [5.- En Pruebas.](./EnPruebas)
 _________________________________________________
 *[Volver atrás...](/README.md)*
