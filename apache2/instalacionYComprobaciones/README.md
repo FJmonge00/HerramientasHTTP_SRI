@@ -12,7 +12,7 @@
 
 ## Versión de apache instalada
 
-``apache2 -v``
+```apache2 -v```apache
 
 ## Estado del servicio
 
