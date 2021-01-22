@@ -8,19 +8,19 @@
 
 Cualquier **IP** del Servidor puerto **80**:
 
-``ServerName www.pagina1.org``
+``apache <VirtualHost *:80>``
 
 **Dominio** del sitio virtual:
 
-``ServerAdmin webmaster@localhost``
+``apache ServerName www.pagina1.org``
 
 **Correo** del administrador:
 
-``ServerAdmin webmaster@localhost``
+``apache ServerAdmin webmaster@localhost``
 
 **Directorio** Raíz del Sitio Virtual:
 
-``DocumentRoot /var/www/html``
+``apache DocumentRoot /var/www/html``
 
 **Directivas** **Características** y **rectriciones** del sitio Virtual Ejemplo:
 
