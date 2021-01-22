@@ -40,6 +40,8 @@ Cualquier **IP** del Servidor puerto **80**:
 
 ## Configuración *Indexes*
 
+### Fichero apache2.conf
+
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
 ```apache
 <Directory /var/www/>
@@ -49,6 +51,28 @@ Cualquier **IP** del Servidor puerto **80**:
 </Directory>
 ```
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
+
+### Cofiguración en página 1 (Permitido)
+*AL COPIAR NO SE COPIAN LAS TABULACIONES*
+```apache
+<Directory /var/www/paginaPruebas>
+    Options -Indexes
+</Directory>
+```
+*AL COPIAR NO SE COPIAN LAS TABULACIONES*
+![ConfigiracionBasica](../../../imagenes/apache2/indexes.png)
+
+### Cofiguración en página 1 (Permitido)
+*AL COPIAR NO SE COPIAN LAS TABULACIONES*
+```apache
+<Directory /var/www/paginaPruebas>
+    Options Indexes
+</Directory>
+```
+*AL COPIAR NO SE COPIAN LAS TABULACIONES*
+![ConfigiracionBasica](../../../imagenes/apache2/noIndexes.png)
+
+
 
 _________________________________________________
 *[Volver atrás...](../README.md)*
