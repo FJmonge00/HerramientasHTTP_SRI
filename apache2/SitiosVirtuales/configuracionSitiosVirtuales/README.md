@@ -21,12 +21,14 @@ ServerName www.pagina1.org
 **Correo** del administrador:
 
 ```apache
-ServerAdmin webmaster@localhost```
+ServerAdmin webmaster@localhost
+```
 
 **Directorio** Raíz del Sitio Virtual:
 
 ```apache
-DocumentRoot /var/www/html```
+DocumentRoot /var/www/html
+```
 
 **Directivas** **Características** y **rectriciones** del sitio Virtual Ejemplo:
 
