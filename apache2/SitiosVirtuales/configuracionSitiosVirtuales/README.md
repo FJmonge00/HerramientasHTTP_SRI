@@ -64,7 +64,7 @@ DocumentRoot /var/www/html
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
 ```apache
 <Directory /var/www/paginaPruebas>
-    Options -Indexes
+    Options Indexes
 </Directory>
 ```
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
@@ -74,7 +74,7 @@ DocumentRoot /var/www/html
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
 ```apache
 <Directory /var/www/paginaPruebas>
-    Options Indexes
+    Options -Indexes
 </Directory>
 ```
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
@@ -86,7 +86,7 @@ DocumentRoot /var/www/html
 
 ``ln -s /etc/hostname``
 
-![enlace](../../../imagenes/apache2/enlace.png)
+![enlace](../../../imagenes/apache2/enlace.jpg)
 
 ### Cofiguración FollowSymLinks (Permitido)
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
