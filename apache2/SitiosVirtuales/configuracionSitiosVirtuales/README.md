@@ -60,7 +60,7 @@ DocumentRoot /var/www/html
 ```
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
 
-### Cofiguración en página 1 (Permitido)
+### Cofiguración Indexes (Permitido)
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
 ```apache
 <Directory /var/www/paginaPruebas>
@@ -70,7 +70,7 @@ DocumentRoot /var/www/html
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
 ![ConfigiracionBasica](../../../imagenes/apache2/indexes.png)
 
-### Cofiguración en página 1 (Permitido)
+### Cofiguración Indexes (No Permitido)
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
 ```apache
 <Directory /var/www/paginaPruebas>
@@ -80,8 +80,41 @@ DocumentRoot /var/www/html
 *AL COPIAR NO SE COPIAN LAS TABULACIONES*
 ![ConfigiracionBasica](../../../imagenes/apache2/noIndexes.png)
 
+## Enlace *FollowSymLinks*
 
+### Enlace creado en el DocumentRoot
 
+``ln -s /etc/hostname``
+
+![enlace](../../../imagenes/apache2/enlace.png)
+
+### Cofiguración FollowSymLinks (Permitido)
+*AL COPIAR NO SE COPIAN LAS TABULACIONES*
+```apache
+<Directory /var/www/paginaPruebas>
+    Options Indexes
+    Options FollowSymLinks
+</Directory>
+```
+#### Acceso desde el navegador (Permitido)
+
+``firefox www.paginaprueba.com/hostname``
+
+![enlace](../../../imagenes/apache2/hostnameNavegador.png)
+
+### Cofiguración FollowSymLinks (No Permitido)
+*AL COPIAR NO SE COPIAN LAS TABULACIONES*
+```apache
+<Directory /var/www/paginaPruebas>
+    Options Indexes
+    Options -FollowSymLinks
+</Directory>
+```
+#### Acceso desde el navegador (NoPermitido)
+
+![NoAccesoEnlace](../../../imagenes/apache2/accesoEnlace.jpg)
+
+``firefox www.paginaprueba.com/hostname``
 _________________________________________________
 *[Volver atrás...](../README.md)*
 
