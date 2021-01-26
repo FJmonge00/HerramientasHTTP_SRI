@@ -24,8 +24,11 @@ El servidor espera 5 segundos a que el cliente le haga una petición. Si no real
 ![imagenusuariosygrupos](/imagenes/apache2/usuarioygrupoDirectivas.png)
 
 **LogLevel:** Controla el nivel de información que se guarda en los ficheros de registro o logs.
+
 **LogFormat:** Controla el formato de información que se va a guardar en los ficheros logs.
+
 **Directory o DirectoryMatch:** Declara un contexto para un directorio y todos sus directorios. Son las opciones que le damos a los directorios.
+
 **Files o FilesMatch:** Declara un contexto para un conjunto de ficheros. Son las opciones que le vamos a dar a los ficheros.
 
 *Teoría obtenida de:* [mftienda](https://github.com/mftienda)
