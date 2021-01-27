@@ -4,7 +4,7 @@
 
 ## Objetivo
 
-![SitiosVirtuales](../../imagenes/apache2/SitosVirtuales.jpg)
+![SitiosVirtuales](../../../imagenes/apache2/SitosVirtuales.jpg)
 
 Tenemos dos sitios web:
 www.pagina1.org → /var/www/pagina1
@@ -31,7 +31,7 @@ echo "<h1>Soy la página 2</h1>" > pagina2/index.html
 chown -R www-data:www-data pagina1/
 chown -R www-data:www-data pagina2/
 ```
-![SitiosVirtuales](../../imagenes/apache2/SitosVirtuales.jpg)
+![SitiosVirtuales](../../../imagenes/apache2/SitosVirtuales.jpg)
 
 ## Creación de los sitios virtuales
 
@@ -101,11 +101,11 @@ ls -l --color /etc/apache2/sites-enabled/
 apache2ctl -S
 ```
 
-![SitiosVirtuales](../../imagenes/apache2/SitiosVirtualesActivos.jpg)
+![SitiosVirtuales](../../../imagenes/apache2/SitiosVirtualesActivos.jpg)
 
 ### Modificamos el /etc/host → En el cliente
 
-![SitiosVirtuales](../../imagenes/apache2/clienteDNS.jpg)
+![SitiosVirtuales](../../../imagenes/apache2/clienteDNS.jpg)
 
 Cuando **escribamos www.pagina1.org** lo mandará a 192.168.3.1 y el servidor web, analizará el dominio y **mostrará la página /var/www/pagina1**
 
@@ -113,7 +113,7 @@ Cuando **escribamos www.pagina2.org** lo mandará a 192.168.3.1 y el servidor we
 
 **Pruebas de acceso:**
 
-![SitiosVirtuales](../../imagenes/apache2/accesoPaginas.png)
+![SitiosVirtuales](../../../imagenes/apache2/accesoPaginas.png)
 
 ## Desactivar el sitio virtual por defecto.
 
