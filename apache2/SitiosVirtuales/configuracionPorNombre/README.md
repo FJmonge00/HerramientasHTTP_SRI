@@ -7,8 +7,10 @@
 ![SitiosVirtuales](../../../imagenes/apache2/SitosVirtuales.jpg)
 
 Tenemos dos sitios web:
-www.pagina1.org → /var/www/pagina1
-www.pagina2.org → /var/www/pagina2
+
+- www.pagina1.org → /var/www/pagina1
+- www.pagina2.org → /var/www/pagina2
+
 Cada sitio web compartirá la misma dirección IP y el mismo puerto (80).
 
 *REQUISITOS*
@@ -31,7 +33,7 @@ echo "<h1>Soy la página 2</h1>" > pagina2/index.html
 chown -R www-data:www-data pagina1/
 chown -R www-data:www-data pagina2/
 ```
-![SitiosVirtuales](../../../imagenes/apache2/SitosVirtuales.jpg)
+![SitiosVirtuales](../../../imagenes/apache2/SitiosVirtualesCreados.jpg)
 
 ## Creación de los sitios virtuales
 
