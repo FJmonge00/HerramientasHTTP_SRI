@@ -31,7 +31,7 @@ echo "<h1>Soy la página 2</h1>" > pagina2/index.html
 chown -R www-data:www-data pagina1/
 chown -R www-data:www-data pagina2/
 ```
-![SitiosVirtuales](../../../imagenes/apache2/SitosVirtuales.jpg)
+![SitiosVirtuales](../../../imagenes/apache2/SitiosVirtualesCreados.jpg)
 
 ## Creación de los sitios virtuales
 
