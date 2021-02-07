@@ -32,10 +32,10 @@ Podemos verlo, en ``/etc/apache2/sites-enabled/000-default.conf``:
 
 *Teoría obtenida de:* [mftienda](https://github.com/mftienda)
 
-## [1.- Configuración sitios virtuales.](./configuracionSitiosVirtuales/)
-## [2.- Sitios virtuales por nombre.](./configuracionPorNombre)
-## [3.- Sitios virtuales por puertos.](./configuracionPorPuerto)
-## [4.- Sitios virtuales por IPs.](./configuracionPorIps)
-## [5.- En Pruebas.](./EnPruebas)
+## [4.1.- Configuración sitios virtuales.](./configuracionSitiosVirtuales/)
+## [4.2.- Sitios virtuales por nombre.](./configuracionPorNombre)
+## [4.3.- Sitios virtuales por puertos.](./configuracionPorPuerto)
+## [4.4.- Sitios virtuales por IPs.](./configuracionPorIps)
+## [4.5.- En Pruebas.](./EnPruebas)
 _________________________________________________
 *[Volver atrás...](/README.md)*
