@@ -90,6 +90,14 @@ vi pagina1.conf
 </VirtualHost>
 ```
 
+## Activar puerto
+
+```bash
+echo "Listen 8081" >> /etc/apache2/ports.conf
+```
+
+![SitiosVirtuales](../../../imagenes/apache2/puerto.jpg)
+
 ## Activamos los sitios virtuales creados
 
 ```bash
@@ -99,8 +107,19 @@ a2ensite pagina3.conf
 systemctl restart apache2.service
 systemctl status apache2.service
 ```
-<!-- 
+
 ## Comprobaciones
+
+```bash
+# COMPROBAR SINTAXIS
+apachectl -t
+#Ver sitios Virtuales
+apachectl -S
+#Ver Puertos
+nmap localhost
+curl 192.168.2.61
+curl 192.168.2.61:8081
+```
 
 ### Sitios virtuales activos
 
@@ -109,19 +128,19 @@ ls -l --color /etc/apache2/sites-enabled/
 apache2ctl -S
 ```
 
-![SitiosVirtuales](../../../imagenes/apache2/SitiosVirtualesActivos.jpg)
+![SitiosVirtuales](../../../imagenes/apache2/puertosSitios.jpg)
 
-### Modificamos el /etc/host → En el cliente
-
-![SitiosVirtuales](../../../imagenes/apache2/clienteDNS.jpg)
-
-Cuando **escribamos www.pagina1.org** lo mandará a 192.168.3.1 y el servidor web, analizará el dominio y **mostrará la página /var/www/pagina1**
-
-Cuando **escribamos www.pagina3.org** lo mandará a 192.168.3.1 y el servidor web, analizará el dominio y **mostrará la página /var/www/pagina3**
 
 **Pruebas de acceso:**
 
 ![SitiosVirtuales](../../../imagenes/apache2/accesoPaginas.png)
+
+## Probar desde el navegador
+
+```bash
+firefox 192.168.2.61
+firefox 192.168.2.61:8081
+```
 
 ## Desactivar el sitio virtual por defecto.
 
@@ -130,7 +149,7 @@ En caso de desactivar el sitio virtual por defecto mostrará el primero que encu
 ```bash
 a2dissite 000-default.conf 
 systemctl reload apache2
-``` -->
+```
 _________________________________________________
 *[Volver atrás...](/README.md)*
 
