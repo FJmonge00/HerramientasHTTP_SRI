@@ -165,12 +165,15 @@ apachectl -S
 ### Desde Red Interna
 
 ```bash
+#Con Curl para sistemas sin entorno gráfico
 curl pagina4.org
 firefox pagina4.org
 ```
+
 ### Desde Red Externa
 
 ```bash
+#Con Curl para sistemas sin entorno gráfico
 curl pagina1.org
 firefox pagina1.org
 ```
