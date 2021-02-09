@@ -22,7 +22,7 @@ vi /etc/hosts
 
 ![SitiosVirtuales](../../../imagenes/apache2/hostsCliente01Ips.png)
 
-## Cliente Máquina "DNS"
+## Cliente Máquina Fisíca "DNS"
 ```bash
 vi /etc/hosts
 ```
@@ -154,9 +154,13 @@ systemctl status apache2.service
 ```bash
 # COMPROBAR SINTAXIS
 apachectl -t
+#Ver Ficheros
+ls -l --color /etc/apache2/sites-enabled/
 #Ver sitios Virtuales
 apachectl -S
 ```
+
+![SitiosVirtuales](../../../imagenes/apache2/compronacionesIPs.jpg)
 
 ### Desde Red Interna
 
@@ -170,15 +174,6 @@ firefox pagina4.org
 curl pagina1.org
 firefox pagina1.org
 ```
-
-### Sitios virtuales activos
-
-```bash
-ls -l --color /etc/apache2/sites-enabled/
-apache2ctl -S
-```
-
-<!-- ![SitiosVirtuales](../../../imagenes/apache2/SitiosVirtualesActivos.jpg) -->
 
 ## Desactivar el sitio virtual por defecto.
 
