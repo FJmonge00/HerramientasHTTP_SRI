@@ -15,7 +15,7 @@ Cuando accedemos por el puerto 80 nos muestra pagina1 y cuando accedemos por el 
 
 *REQUISITOS*
 
-*Registrar en servidor **DNS** el dominio, si no es posible, en el fichero ``/etc/hots``*
+*Registrar en servidor **DNS** el dominio, si no es posible, en el fichero ``/etc/hosts``*
 
 ## Preparación del entorno: las páginas web
 
