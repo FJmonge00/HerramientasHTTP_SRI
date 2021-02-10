@@ -12,15 +12,22 @@
 |SymLinksIfOwnerMatc   |Se pueden seguir enlaces simbólicos, sólo cuando el fichero destino es del mismo propietario que el enlace simbólico.                                                     |
 |ExecCGI               | Permite ejecutar script CGI (interfaz) usando el módulo mod_cgi.                                                    |
 
-## Options del directorio /var/www (POR DEFECTO)
+## Orden de indexado (POR DEFECTO)
 
 ```bash
 cat /etc/apache2/mods-available/dir.conf
 ```
 
-![Indexes](../../imagenes/apache2/opciones-var-www.jpg)
+![Indexes](../../imagenes/apache2/ordenIndexado.jpg)
 
-## Desactiva Indexes del sitio virtual: www.pagina1.org
+## Options de directorios  (apache2.conf)
+
+```bash
+cat /etc/apache2/apache2.conf
+```
+![Opciones](../../imagenes/apache2/OpcionesPorDefecto.jpg)
+
+## Desactivar Indexes de sitio virtual
 
 ### Configuración del sitio virtual
 
@@ -98,7 +105,7 @@ firefox http://www.pagina1.org/paraLaWeb.txt
 #Desde Servidor
 apachectl -t
 systemctl restart apache2
-
+```
 _________________________________________________
 *[Volver atrás...](/README.md)*
 
