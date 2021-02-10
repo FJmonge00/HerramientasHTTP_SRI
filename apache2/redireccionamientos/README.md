@@ -24,7 +24,7 @@ vi /etc/apache2/sites-available/pagina1.conf
 
 ![Opciones](../../imagenes/apache2/redireConfiguracion.jpg)
 
-**Quitando comentarios y lineas en blanco**
+**Quitando comentarios y líneas en blanco**
 ```apache
 <VirtualHost *:80>
 	ServerName www.pagina1.org
@@ -55,7 +55,7 @@ vi /etc/apache2/sites-available/pagina1.conf
 
 ![Opciones](../../imagenes/apache2/configuracionRedireccionPerma.jpg)
 
-**Quitando comentarios y lineas en blanco**
+**Quitando comentarios y líneas en blanco**
 ```apache
 <VirtualHost *:80>
 	ServerName www.pagina1.org
