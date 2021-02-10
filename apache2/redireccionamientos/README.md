@@ -37,9 +37,10 @@ vi /etc/apache2/sites-available/pagina1.conf
 
 # vim: syntax=apache ts=4 somprueba sintaxis
 ```
-**Reiniciar Servicios...**
+**Sintaxis y Reiniciar Servicios...**
 
 ```bash
+apache2ctl -t
 systemctl restart apache2.service
 systemctl status apache2.service
 ```
@@ -68,7 +69,7 @@ systemctl status apache2.service
 
 [**CLIC PARA COPIAR FICHERO**](./pagina1Permanente.conf)
 
-**Reiniciar Servicios...**
+**Sintaxis y Reiniciar Servicios...**
 
 ```bash
 apache2ctl -t
