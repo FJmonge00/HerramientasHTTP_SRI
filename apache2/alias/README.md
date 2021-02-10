@@ -31,6 +31,8 @@ Alias "/datos" "/home/usuario/datos"
 vi /etc/apache2/sites-available/pagina1.conf
 ```
 
+**No se copian las tabulaciones**
+
 ```apache
 <VirtualHost *:80>
 	# The ServerName directive sets the request scheme, hostname and port that
