@@ -4,7 +4,7 @@
 
 Las directiva Alias nos permite que el servidor sirva ficheros desde cualquier ubicación del sistema de archivo aunque este fuera del directorio indicado en el DocumentRoot.
 
-Ej: Alias "/imagenes" "/ftp/publico/imagenes"
+Ej: `Alias "/imagenes" "/ftp/publico/imagenes"`
 
 ## Preparamos el los datos
 
@@ -29,6 +29,11 @@ Alias "/datos" "/home/usuario/datos"
 ```bash
 vi /etc/apache2/sites-available/pagina1.conf
 ```
+dsdsdsdsdsd
+```apache
+
+```
+[**CLIC PARA COPIAR FICHERO**](./pagina1.conf)
 
 _________________________________________________
 *[Volver atrás...](/README.md)*
