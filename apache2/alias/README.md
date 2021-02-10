@@ -10,6 +10,7 @@ Ej: `Alias "/imagenes" "/ftp/publico/imagenes"`
 
 ```bash
 mkdir /home/usuario/datos
+cd /home/usuario/datos
 wget https://i.blogs.es/5efe2c/cap_001/450_1000.jpg
 chown -R usuario:usuario /home/usuario/datos
 ls -l /home/usuario/datos
