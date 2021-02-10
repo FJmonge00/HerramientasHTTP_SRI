@@ -8,24 +8,21 @@
 
 ## Directiva Apache 2.4
 
-- Require all granted: El acceso es permitido incondicionalmente.
+- **Require all granted**: El acceso es permitido incondicionalmente.
 
--Require all denied: El acceso es denegado incondicionalmente.
+- **Require all denied**: El acceso es denegado incondicionalmente.
 
-- Require user userid [userid] ...: El acceso es permitido sólo si los usuarios indicados se han autentificado.
+- **Require user userid [userid] ...**: El acceso es permitido sólo si los usuarios indicados se han autentificado.
 
-- Require group group-name [group-name] ...: El acceso es permitido sólo a los grupos de usuarios especificados.
+- **Require group group-name [group-name] ...**: El acceso es permitido sólo a los grupos de usuarios especificados.
 
-- Require valid-user: El acceso es permitido a los usuarios válidos.
-A todos los usuarios que tengamos definidos.
+- **Require valid-user**: El acceso es permitido a los usuarios válidos. A todos los usuarios que tengamos definidos.
 
-- Require ip 10 172.20 192.168.2: El acceso es permitido si se hace desde el conjunto de direcciones especificadas.
-Las que empiecen por 10, 172.20, 192.168.2 No es necesario poner la IP completa.
-- Require host dominio: El acceso es permitido si se hace desde el 
-dominio especificado.
+- **Require ip 10 172.20 192.168.2**: El acceso es permitido si se hace desde el conjunto de direcciones especificadas. Las que empiecen por 10, 172.20, 192.168.2 No es necesario poner la IP completa.
 
-- Require local: El acceso es permitido desde localhost.
-Se puede usar el operador not para indicar la denegación, por ejemplo:
+- **Require host dominio**: El acceso es permitido si se hace desde el dominio especificado.
+
+- **Require local**: El acceso es permitido desde localhost. Se puede usar el operador not para indicar la denegación, por ejemplo:
 Require not ip 10.0
 
 ## Ejemplos
