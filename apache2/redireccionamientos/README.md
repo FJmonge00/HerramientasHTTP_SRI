@@ -90,21 +90,10 @@ curl www.pagina1.org/web
 *Aparece como codigo de redireccion 302 (Temporal)*
 ![Opciones](../../imagenes/apache2/comprobacionCurlTemporal.jpg)
 
-*Aparece como codigo de redireccion 30 (Permanente)*
+*Aparece como codigo de redireccion 301 (Permanente)*
 ![Opciones](../../imagenes/apache2/redirecionCurlPermanente.jpg)
 
 ![Opciones](../../imagenes/apache2/redireccionamiento.gif)
-
-### Sitios virtuales activos
-
-```bash
-
-```
-<!-- 
-### Modificamos el /etc/host → En el cliente
-
-
-**Pruebas de acceso:** -->
 
 __________________________
 *[Volver atrás...](/README.md)*
