@@ -5,9 +5,9 @@
 Gracias a la directiva **redirect**, podemos decirle al cliente donde se encuentra la nueva ubicación.
 
 Podemos crear redirecciones de dos tipos:
-- Permanentes: se da cuando el recurso sobre el que se hace la petición ha sido ‘movido permanentemente‘ hacia una dirección distinta, es decir, hacia otra URL. 
+- **Permanentes**: se da cuando el recurso sobre el que se hace la petición ha sido ‘movido permanentemente‘ hacia una dirección distinta, es decir, hacia otra URL. 
 Devuelven el estado: 301 (Los buscadores indexan las redirecciones permanentes.)
-- Temporales: se da cuando el recurso sobre el que se hace la petición ha sido “encontrado” pero reside temporalmente en una dirección distinta, es decir, en otra URL. 
+- **Temporales**: se da cuando el recurso sobre el que se hace la petición ha sido “encontrado” pero reside temporalmente en una dirección distinta, es decir, en otra URL. 
 Devuelven el estado:  302
 
 ## Configuración de redireccionamientos
@@ -18,7 +18,9 @@ Devuelven el estado:  302
 
 ### Redireccionamientos temporales
 
-```vi /etc/apache2/sites-available/pagina1.conf
+```bash
+vi /etc/apache2/sites-available/pagina1.conf
+```
 
 ![Opciones](../../imagenes/apache2/redireConfiguracion.jpg)
 
