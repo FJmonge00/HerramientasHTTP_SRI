@@ -49,7 +49,9 @@ systemctl status apache2.service
 
 ### Redireccionamientos Permanentes
 
-```vi /etc/apache2/sites-available/pagina1.conf
+```bash
+vi /etc/apache2/sites-available/pagina1.conf
+```
 
 ![Opciones](../../imagenes/apache2/configuracionRedireccionPerma.jpg)
 
