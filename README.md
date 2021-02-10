@@ -12,7 +12,7 @@
 ## [3.- Directivas.](./apache2/Directivas)
 ## [4.- Sitios Virtuales.](./apache2/SitiosVirtuales)
 ## [5.- Opciones de directorio.](./apache2/OpcionesDirectorio)
-<!-- ## [6.- Preparaciones para un cliente.](./variado/preparandoCliente.md) -->
+## [6.- Alias.](/apache2/alias/)
 <!-- ## [7.- Ver Configuraciones de NFS y compartir directorios IMAGENES.](./variado/CapturasExportaciones/) -->
 <!-- ## [8.- Herramientas Gráficas.](./HerramientasGraficas) -->
 <!-- ## [9.- Scripting LDAP.](./scripts) -->
