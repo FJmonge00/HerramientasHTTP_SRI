@@ -31,7 +31,7 @@ Alias "/datos" "/home/usuario/datos"
 vi /etc/apache2/sites-available/pagina1.conf
 ```
 
-**No se copian las tabulaciones**
+*NO SE COPIAN LAS TABULACIONES*
 
 ```apache
 <VirtualHost *:80>
