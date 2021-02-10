@@ -57,7 +57,7 @@ systemctl status apache2.service
 
 [**CLIC PARA COPIAR FICHERO**](./pagina1Para1Sitio.conf)
 
-### Personalizar el error 404 para todos los virtualhost
+### Personalizar el error 404 para todos los virtualhost.
 
 ```bash
 vi /etc/apache2/sites-available/pagina1.conf
@@ -83,14 +83,14 @@ vi /etc/apache2/sites-available/pagina1.conf
 ```
 **Añadir un error por defecto para todos los sitios virtuales**
 
+```bash
+vi /etc/apache2/conf-available/localized-error-pages.conf
+```
+
 ![Opciones](../../imagenes/apache2/Error404Global.jpg)
 
 ```apache
 ErrorDocument 404 "Esta web NO esta disponible"
-```
-
-```bash
-vi /etc/apache2/conf-available/localized-error-pages.conf
 ```
 
 **Sintaxis y Reiniciar Servicios...**
