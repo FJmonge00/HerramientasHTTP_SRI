@@ -29,13 +29,13 @@ Require not ip 10.0
 
 ### Ejemplo 1
 
-RequireAll --> Todas las condiciones que pongamos se deben cumplir
+RequireAll → Todas las condiciones que pongamos se deben cumplir
 
 ![Opciones](../../imagenes/apache2/ejemplosFotos.jpg)
 
 ### Ejemplo 2
 
-RequireAll --> Todas las condiciones que pongamos se deben cumplir
+RequireAll → Todas las condiciones que pongamos se deben cumplir
 
 ![Opciones](../../imagenes/apache2/ejemplosFotos2.jpg)
 
