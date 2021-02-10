@@ -36,5 +36,13 @@ dsdsdsdsdsd
 ```
 [**CLIC PARA COPIAR FICHERO**](./pagina1.conf)
 
+### Comprobación
+```bash
+#Desde Cliente
+firefox http://www.pagina1.org/datos
+#Desde Servidor
+apachectl -t
+systemctl restart apache2
+```
 _________________________________________________
 *[Volver atrás...](/README.md)*
