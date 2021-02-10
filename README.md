@@ -11,7 +11,7 @@
 ## [2.- Estructura de ficheros de configuración.](./apache2/EstructuraFicherosConfiguracion)
 ## [3.- Directivas.](./apache2/Directivas)
 ## [4.- Sitios Virtuales.](./apache2/SitiosVirtuales)
-<!-- ## [5.- Eliminar Campos.](./LDIF/eliminarMail.ldif) -->
+## [5.- Opciones de directorio.](./apache2/OpcionesDirectorio)
 <!-- ## [6.- Preparaciones para un cliente.](./variado/preparandoCliente.md) -->
 <!-- ## [7.- Ver Configuraciones de NFS y compartir directorios IMAGENES.](./variado/CapturasExportaciones/) -->
 <!-- ## [8.- Herramientas Gráficas.](./HerramientasGraficas) -->
