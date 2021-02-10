@@ -14,5 +14,5 @@
 ## [5.- Opciones de directorio.](./apache2/OpcionesDirectorio)
 ## [6.- Alias.](./apache2/alias/)
 ## [7.- Redireccionamientos.](./apache2/redireccionamientos/)
-<!-- ## [8.- Herramientas Gráficas.](./HerramientasGraficas) -->
+## [8.- Páginas de errores personalizados.](./apache2/ErroresPersonalizados)
 <!-- ## [9.- Scripting LDAP.](./scripts) -->

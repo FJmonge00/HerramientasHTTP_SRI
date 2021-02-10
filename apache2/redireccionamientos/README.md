@@ -1,14 +1,14 @@
 <img src="/imagenes/MI-LICENCIA88x31.png" style="float: left; margin-right: 10px;" />
 
-# Mapeado de URL: Redireccionamiento
+# Redireccionamiento
 
 Gracias a la directiva **redirect**, podemos decirle al cliente donde se encuentra la nueva ubicación.
 
 Podemos crear redirecciones de dos tipos:
 - **Permanentes**: se da cuando el recurso sobre el que se hace la petición ha sido ‘movido permanentemente‘ hacia una dirección distinta, es decir, hacia otra URL. 
-Devuelven el estado: 301 (Los buscadores indexan las redirecciones permanentes.)
+*Devuelven el estado: 301* (Los buscadores indexan las redirecciones permanentes.)
 - **Temporales**: se da cuando el recurso sobre el que se hace la petición ha sido “encontrado” pero reside temporalmente en una dirección distinta, es decir, en otra URL. 
-Devuelven el estado:  302
+*Devuelven el estado:  302*
 
 ## Configuración de redireccionamientos
 
