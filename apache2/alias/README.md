@@ -44,5 +44,12 @@ firefox http://www.pagina1.org/datos
 apachectl -t
 systemctl restart apache2
 ```
+
+## Acceso vía web
+
+***Acceder con la URL completa, no indexa el diretorio /datos***
+
+![acceso](../../imagenes/apache2/accesoViaWeb.png)
+
 _________________________________________________
 *[Volver atrás...](/README.md)*
