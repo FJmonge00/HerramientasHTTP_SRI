@@ -2,6 +2,10 @@
 
 # Control de acceso
 
+## Directiva Apache 2.2
+
+[Clic para ver Directivas Apache 2.2](directivasApacher2-2.md)
+
 ## Directiva Apache 2.4
 
 - Require all granted: El acceso es permitido incondicionalmente.
