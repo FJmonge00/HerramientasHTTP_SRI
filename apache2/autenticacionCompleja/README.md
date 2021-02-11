@@ -2,6 +2,10 @@
 
 # Autenticación Complejo
 
+## Políticas de acceso en Apache 2.2
+
+[Clic para ver Directivas Apache 2.2](autenticacionCompleja2-2.md)
+
 ## Políticas de acceso en Apache 2.4
 
 En la versión 2.4 el control de acceso se determinan con la directiva `Require`, y las políticas de acceso la podemos indicar usando las directivas:
@@ -202,7 +206,7 @@ vi /etc/apache2/sites-available/pagina1.conf
 
 # vim: syntax=apache ts=4 somprueba sintaxis
 ```
-[**CLIC PARA COPIAR FICHERO**](./pagina1UnaUOtra.conf)
+[**CLIC PARA COPIAR FICHERO**](./pagina1UnaUOtraSolo1Usuario.conf)
 
 **Sintaxis y Reiniciar Servicios...**
 
