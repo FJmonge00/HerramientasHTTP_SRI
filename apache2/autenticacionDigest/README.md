@@ -9,11 +9,6 @@ Cada vez que se conecta la cadena encriptada es diferente.
 El procedimiento, como veréis, es muy similar al tipo básico pero cambiando algunas de las directivas y usando la utilidad htdigest en lugar de htpassword para crear el fichero de contraseñas. 
 El módulo de autenticación necesario suele venir con Apache pero no habilitado por defecto. 
 
-Teoría obtenida: [mftienda](https://github.com/mftienda/).
-
-a2enmod auth_digest
-systemctl restart apache2 
-
 *Esta tarea se puede delegar en otros, por ejemplo en el php de tu web*
 
 *Ejemplo de configuracion:*
