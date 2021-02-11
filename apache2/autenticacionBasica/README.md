@@ -137,7 +137,7 @@ vi /etc/apache2/sites-available/pagina1.conf
 	<Directory /var/www/pagina1/privado >
 		AuthUserFile "/etc/apache2/claves/passwd.txt"
         Require user usuario01
-		AuthName "Indique usuario y contraseña"
+		AuthName "Indique usuario y contrasena"
 		AuthType Basic
 		#Require valid-user
 	</Directory>
