@@ -28,7 +28,7 @@ etc.
 | **Directory** | En directory escribimos el directorio a proteger, que puede ser el raíz de nuestro Virtual Host o un subdirectorio. |
 | **AuthUserFile** | En AuthUserFile ponemos el fichero que guardará la información de usuarios y contraseñas que debería de estar, como en este ejemplo, en un directorio que no sea visitable desde nuestro Apache |
 | **AuthName** | Personalizar el mensaje que aparecerá en la ventana del navegador que nos pedirá la contraseña. |
-| **Para usuarios y grupos:** | AuthGroupFile, Require user, Require group |
+| **Usuarios y Grupos** | AuthGroupFile, Require user, Require group |
 
 
 ## Activar Modulo de autenticación basica
