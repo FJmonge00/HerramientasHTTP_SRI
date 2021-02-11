@@ -31,9 +31,9 @@ etc.
 | **Usuarios y Grupos** | AuthGroupFile, Require user, Require group |
 
 
-## Activar Modulo de autenticación basica
+## Activar Modulo de autenticación básica
 
-```apache
+```bash
 #Módulos Activos
 ls -l --color /etc/apache2/mods-enabled/
 #Ver módulos: apachectl -M
@@ -43,7 +43,7 @@ ls -l --color /etc/apache2/mods-enabled/auth_basic.load
 
 *Sí está desactivado...*
 
-```apache
+```bash
 cd /etc/apache2/mods-available/
 # Si esta desactivado:
 a2enmod auth_basic
