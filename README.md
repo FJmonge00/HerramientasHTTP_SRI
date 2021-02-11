@@ -16,3 +16,4 @@
 ## [7.- Redireccionamientos.](./apache2/redireccionamientos/)
 ## [8.- Páginas de errores personalizados.](./apache2/ErroresPersonalizados)
 ## [9.- Control de acceso.](./apache2/controlAcceso)
+## [10.- Autenticación Básica.](./apache2/autenticacionBasica)
