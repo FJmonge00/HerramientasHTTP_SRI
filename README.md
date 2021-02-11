@@ -19,3 +19,5 @@
 ## [10.- Autenticación Básica.](./apache2/autenticacionBasica)
 ## [11.- Autenticación Digest.](./apache2/autenticacionDigest)
 ## [12.- Autenticación Compleja.](./apache2/autenticacionCompleja)
+## [13.- htacces.](./apache2/htacces)
+## [14.- htacces.](./apache2/WebDAv.md)
