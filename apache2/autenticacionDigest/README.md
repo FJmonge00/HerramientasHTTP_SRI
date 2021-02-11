@@ -108,7 +108,7 @@ systemctl restart apache2.service
 systemctl status apache2.service
 ```
 
-## Ver erroes Logs de Acceso
+## Ver errores Logs de Acceso
 
 ```bash
 cat /var/log/apache2/error_pagina1.log

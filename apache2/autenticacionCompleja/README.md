@@ -33,7 +33,7 @@ En la versión 2.4 el control de acceso se determinan con la directiva `Require`
 | **Usuarios y Grupos** | AuthGroupFile, Require user, Require group |
 
 
-## Activar Modulo de autenticación básica
+## Activar Modulo de autenticación
 
 ```bash
 #Módulos Activos
@@ -70,13 +70,13 @@ apt-get install apache2-utils
 ![crearUsuarios](../../imagenes/apache2/crearUsuariosDigest.png)
 ![crearUsuarios](../../imagenes/apache2/ficheroDigest.jpg)
 
-## Configurar Sitio Virtual
+## Configuraraciones Sitio Virtual
+
+**Configurar el acceso al directorio privado para la red interna y para un usuario válido de digest.txt**
 
 ```bash
 vi /etc/apache2/sites-available/pagina1.conf
 ```
-
-![crearUsuarios](../../imagenes/apache2/configuracionDigest.jpg)
 
 **Quitando comentarios y líneas en blanco**
 
@@ -85,12 +85,14 @@ vi /etc/apache2/sites-available/pagina1.conf
 	ServerName www.pagina1.org
 	ServerAdmin webmaster@localhost
 	DocumentRoot /var/www/pagina1
-
 	<Directory /var/www/pagina1/privado >
 		AuthUserFile "/etc/apache2/claves/digest.txt"
 		AuthName "asir2"
 		AuthType Digest
-		Require valid-user
+		<RequireAll>
+			Require ip 192.168.3
+			Require valid-user
+		</RequireAll>
 	</Directory>
 	ErrorLog ${APACHE_LOG_DIR}/error_pagina1.log
 	CustomLog ${APACHE_LOG_DIR}/access_pagina1.log combined
@@ -108,8 +110,58 @@ apache2ctl -t
 systemctl restart apache2.service
 systemctl status apache2.service
 ```
+### Comprobar acceso
 
-## Ver erroes Logs de Acceso
+- El cliente de la red externa debe recibir un error 403.
+- El cliente de la red interna debe poder acceder pero siempre con un usuario autenticado.
+
+**Modificación para cumplir UNA única condición (entre por la red interna o que se valide con usuario y contraseña)**
+
+```bash
+vi /etc/apache2/sites-available/pagina1.conf
+```
+
+**Quitando comentarios y líneas en blanco**
+
+```apache
+<VirtualHost *:80>
+	ServerName www.pagina1.org
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/pagina1
+	<Directory /var/www/pagina1/privado >
+		AuthUserFile "/etc/apache2/claves/digest.txt"
+		AuthName "asir2"
+		AuthType Digest
+		<RequireAny>
+			Require ip 192.168.3
+			Require valid-user
+		</RequireAny>
+	</Directory>
+	ErrorLog ${APACHE_LOG_DIR}/error_pagina1.log
+	CustomLog ${APACHE_LOG_DIR}/access_pagina1.log combined
+</VirtualHost>
+
+# vim: syntax=apache ts=4 somprueba sintaxis
+```
+
+[**CLIC PARA COPIAR FICHERO**](./pagina1UnaUOtra.conf)
+
+**Sintaxis y Reiniciar Servicios...**
+
+```bash
+apache2ctl -t
+systemctl restart apache2.service
+systemctl status apache2.service
+```
+
+
+### Comprobar acceso
+
+- El cliente de la red externa debe poder acceder pero siempre con un usuario autenticado.
+- El cliente de la red interna debe poder acceder sin atenticación.
+
+
+## Ver errores Logs de Acceso
 
 ```bash
 cat /var/log/apache2/error_pagina1.log
@@ -117,12 +169,7 @@ cat /var/log/apache2/error_pagina1.log
 
 ![crearUsuarios](../../imagenes/apache2/accesosLOGApache.jpg)
 
-
-## Comprobar acceso
-
-![crearUsuarios](../../imagenes/apache2/accesosComprobar.gif)
-
-## Configurar sitio virtual para 1 solo usuario
+## Configurar sitio virtual para cumplir UNA única condición para y ADEMÁS solo acceda 1 solo USUARIO
 
 Si solo nos interesa que acceda un usuario, utilizaremos: *Require user usuario01, en lugar de Require valid user*
 
@@ -144,7 +191,10 @@ vi /etc/apache2/sites-available/pagina1.conf
 		Require user usuario01
 		AuthName "asir2"
 		AuthType Digest
-		#Require valid-user
+		<RequireAny>
+			Require ip 192.168.3
+			Require user usuario01
+		</RequireAny>
 	</Directory>
 	ErrorLog ${APACHE_LOG_DIR}/error_pagina1.log
 	CustomLog ${APACHE_LOG_DIR}/access_pagina1.log combined
@@ -152,7 +202,7 @@ vi /etc/apache2/sites-available/pagina1.conf
 
 # vim: syntax=apache ts=4 somprueba sintaxis
 ```
-[**CLIC PARA COPIAR FICHERO**](./pagina1Solo1usuario.conf)
+[**CLIC PARA COPIAR FICHERO**](./pagina1UnaUOtra.conf)
 
 **Sintaxis y Reiniciar Servicios...**
 
@@ -162,9 +212,10 @@ systemctl restart apache2.service
 systemctl status apache2.service
 ```
 
-*Acceso de 1 solo usuario (Solo puede entrar el usuario01)*
+### Comprobar acceso
 
-![crearUsuarios](../../imagenes/apache2/acceso1Usuario.gif)
+- El cliente debe poder acceder pero siempre autenticando CON un `usuario01` .
+- El cliente debe poder acceder y ademas autenticarse con un usuario.
 
 __________________________
 *[Volver atrás...](/README.md)*
