@@ -27,3 +27,6 @@
     Allow from example.org
 </Directory>
  ```
+
+__________________________
+*[Volver atrás...](/README.md)*
