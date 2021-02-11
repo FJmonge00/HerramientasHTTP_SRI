@@ -18,3 +18,4 @@
 ## [9.- Control de acceso.](./apache2/controlAcceso)
 ## [10.- Autenticación Básica.](./apache2/autenticacionBasica)
 ## [11.- Autenticación Digest.](./apache2/autenticacionDigest)
+## [11.- Autenticación Compleja.](./apache2/autenticacionCompleja)
