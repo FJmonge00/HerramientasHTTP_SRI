@@ -66,21 +66,13 @@ apt-get install apache2-utils
 ![crearUsuarios](../../imagenes/apache2/crearUsuarios.jpg)
 ![crearUsuarios](../../imagenes/apache2/crearUsuarios2.jpg)
 
-## Ver Accesos LOG
+## Configurar Sitio Virtual
 
 ```bash
-cat /var/log/apache2/error_pagina1.log
+vi /etc/apache2/sites-available/pagina1.conf
 ```
 
-![crearUsuarios](../../imagenes/apache2/accesosLOGApache.jpg)
-
-<!-- Si solo nos interesa que acceda un usuario, utilizaremos:
-Require user usuario1, en lugar de Require valid user -->
-
-## Comprobar acceso
-
-![crearUsuarios](../../imagenes/apache2/accesosComprobar.gif)
-
+![crearUsuarios](../../imagenes/apache2/configSitioVirtualAuten.jpg)
 
 **Quitando comentarios y líneas en blanco**
 
@@ -90,10 +82,10 @@ Require user usuario1, en lugar de Require valid user -->
 	ServerAdmin webmaster@localhost
 	DocumentRoot /var/www/pagina1
 	<Directory /var/www/pagina1/privado >
-		<RequireAll>
-			Require all granted
-			Require not ip 192.168.0
-		</RequireAll>
+		AuthUserFile "/etc/apache2/claves/passwd.txt"
+		AuthName "Indique usuario y contraseña"
+		AuthType Basic
+		Require valid-user
 	</Directory>
 	ErrorLog ${APACHE_LOG_DIR}/error_pagina1.log
 	CustomLog ${APACHE_LOG_DIR}/access_pagina1.log combined
@@ -101,6 +93,8 @@ Require user usuario1, en lugar de Require valid user -->
 
 # vim: syntax=apache ts=4 somprueba sintaxis
 ```
+
+[**CLIC PARA COPIAR FICHERO**](./pagina1.conf)
 
 **Sintaxis y Reiniciar Servicios...**
 
@@ -110,6 +104,19 @@ systemctl restart apache2.service
 systemctl status apache2.service
 ```
 
-![Opciones](../../imagenes/apache2/accesoErroresProhibi.jpg)
+## Ver erroes Logs de Acceso
+
+```bash
+cat /var/log/apache2/error_pagina1.log
+```
+:
+![crearUsuarios](../../imagenes/apache2/accesosLOGApache.jpg)
+
+<!-- Si solo nos interesa que acceda un usuario, utilizaremos:
+Require user usuario1, en lugar de Require valid user -->
+
+## Comprobar acceso
+
+![crearUsuarios](../../imagenes/apache2/accesosComprobar.gif)
 __________________________
 *[Volver atrás...](/README.md)*
