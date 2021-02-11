@@ -109,14 +109,57 @@ systemctl status apache2.service
 ```bash
 cat /var/log/apache2/error_pagina1.log
 ```
-:
+
 ![crearUsuarios](../../imagenes/apache2/accesosLOGApache.jpg)
 
-<!-- Si solo nos interesa que acceda un usuario, utilizaremos:
-Require user usuario1, en lugar de Require valid user -->
 
 ## Comprobar acceso
 
 ![crearUsuarios](../../imagenes/apache2/accesosComprobar.gif)
+
+## Configurar sitio virtual para 1 solo usuario
+
+Si solo nos interesa que acceda un usuario, utilizaremos: *Require user usuario01, en lugar de Require valid user*
+
+```bash
+vi /etc/apache2/sites-available/pagina1.conf
+```
+
+<!-- ![crearUsuarios](../../imagenes/apache2/configSitioVirtualAuten.jpg) -->
+
+**Quitando comentarios y líneas en blanco**
+
+```apache
+<VirtualHost *:80>
+	ServerName www.pagina1.org
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/pagina1
+	<Directory /var/www/pagina1/privado >
+		AuthUserFile "/etc/apache2/claves/passwd.txt"
+        Require user usuario01
+		AuthName "Indique usuario y contraseña"
+		AuthType Basic
+		#Require valid-user
+	</Directory>
+	ErrorLog ${APACHE_LOG_DIR}/error_pagina1.log
+	CustomLog ${APACHE_LOG_DIR}/access_pagina1.log combined
+</VirtualHost>
+
+# vim: syntax=apache ts=4 somprueba sintaxis
+```
+[**CLIC PARA COPIAR FICHERO**](./pagina1Solo1usuario.conf)
+
+**Sintaxis y Reiniciar Servicios...**
+
+```bash
+apache2ctl -t
+systemctl restart apache2.service
+systemctl status apache2.service
+```
+
+*Acceso de 1 solo usuario (Solo puede entrar el usuario01)*
+
+![crearUsuarios](../../imagenes/apache2/acceso1Usuario.gif)
+
 __________________________
 *[Volver atrás...](/README.md)*
