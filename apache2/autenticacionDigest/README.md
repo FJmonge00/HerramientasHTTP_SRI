@@ -32,7 +32,7 @@ El módulo de autenticación necesario suele venir con Apache pero no habilitado
 | **Usuarios y Grupos** | AuthGroupFile, Require user, Require group |
 
 
-## Activar Modulo de autenticación básica
+## Activar Modulo de autenticación Digest
 
 ```bash
 #Módulos Activos
