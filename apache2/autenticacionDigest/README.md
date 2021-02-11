@@ -2,11 +2,17 @@
 
 # Autenticación Digest
 
-Apache permite configurar el servidor para que se exija un nombre de usuario y una contraseña para acceder a un recurso.
-Existen varios módulos de autenticación en apache para ello, ya que los usuarios pueden estar guardados de distinta forma:
-Base de datos
-OpenLDAP
-etc.
+La autentificación básica, tiene un problema y es que aunque las contraseñas están encriptadas en el fichero, cuando se realiza la petición o el acceso la contraseña viaja en texto plano.
+La autentificación tipo digest soluciona el problema de la transferencia de contraseñas en claro sin necesidad de usar SSL. 
+Se aplica una función hash a la contraseña antes de ser enviada sobre la red, lo que resulta más seguro que enviarla en texto plano como en la autenticación básica. 
+Cada vez que se conecta la cadena encriptada es diferente.
+El procedimiento, como veréis, es muy similar al tipo básico pero cambiando algunas de las directivas y usando la utilidad htdigest en lugar de htpassword para crear el fichero de contraseñas. 
+El módulo de autenticación necesario suele venir con Apache pero no habilitado por defecto. 
+
+Teoría obtenida: [mftienda](https://github.com/mftienda/).
+
+a2enmod auth_digest
+systemctl restart apache2 
 
 *Esta tarea se puede delegar en otros, por ejemplo en el php de tu web*
 
@@ -14,7 +20,7 @@ etc.
 
 ```apache
 <Directory "/var/www/pagina1/privado">
-    AuthUserFile "/etc/apache2/claves/passwd.txt"
+    AuthUserFile "/etc/apache2/claves/digest.txt"
     AuthName "Palabra de paso"
     AuthType Basic
     Require valid-user
@@ -38,23 +44,25 @@ etc.
 ls -l --color /etc/apache2/mods-enabled/
 #Ver módulos: apachectl -M
 #Módulo para la autenticación básica
-ls -l --color /etc/apache2/mods-enabled/auth_basic.load
+ls -l --color /etc/apache2/mods-enabled/auth_digest.load
 ```
 
 *Sí está desactivado...*
 
 ```bash
-cd /etc/apache2/mods-available/
-# Si esta desactivado:
-a2enmod auth_basic
+a2enmod auth_digest
+systemctl restart apache2 
 ```
 
 ##  Crear Usuarios
 
+**En digest es necesario indicar el grupo o dominio además del usuario**
+**El valor de la directiva `AuthName` será el grupo o dominio indicado**
+
 ```bash
 mkdir /etc/apache2/claves/
-htpasswd -c /etc/apache2/claves/passwd.txt usuario01 # Opción -c SOLO PARA CREAR EL FICHERO 1ª Vez
-htpasswd /etc/apache2/claves/passwd.txt usuario02
+htdigest -c /etc/apache2/claves/digest.txt asir2 usuario01 # Opción -c SOLO PARA CREAR EL FICHERO 1ª Vez
+htdigest /etc/apache2/claves/digest.txt asir2 usuario02
 ```
 
 *Si no está instalado...*
@@ -63,8 +71,8 @@ htpasswd /etc/apache2/claves/passwd.txt usuario02
 apt-get install apache2-utils
 ```
 
-![crearUsuarios](../../imagenes/apache2/crearUsuarios.jpg)
-![crearUsuarios](../../imagenes/apache2/crearUsuarios2.jpg)
+![crearUsuarios](../../imagenes/apache2/crearUsuariosDigest.png)
+![crearUsuarios](../../imagenes/apache2/ficheroDigest.jpg)
 
 ## Configurar Sitio Virtual
 
@@ -72,7 +80,7 @@ apt-get install apache2-utils
 vi /etc/apache2/sites-available/pagina1.conf
 ```
 
-![crearUsuarios](../../imagenes/apache2/configSitioVirtualAuten.jpg)
+![crearUsuarios](../../imagenes/apache2/configuracionDigest.jpg)
 
 **Quitando comentarios y líneas en blanco**
 
@@ -81,10 +89,11 @@ vi /etc/apache2/sites-available/pagina1.conf
 	ServerName www.pagina1.org
 	ServerAdmin webmaster@localhost
 	DocumentRoot /var/www/pagina1
+
 	<Directory /var/www/pagina1/privado >
-		AuthUserFile "/etc/apache2/claves/passwd.txt"
-		AuthName "Indique usuario y contraseña"
-		AuthType Basic
+		AuthUserFile "/etc/apache2/claves/digest.txt"
+		AuthName "asir2"
+		AuthType Digest
 		Require valid-user
 	</Directory>
 	ErrorLog ${APACHE_LOG_DIR}/error_pagina1.log
@@ -135,10 +144,10 @@ vi /etc/apache2/sites-available/pagina1.conf
 	ServerAdmin webmaster@localhost
 	DocumentRoot /var/www/pagina1
 	<Directory /var/www/pagina1/privado >
-		AuthUserFile "/etc/apache2/claves/passwd.txt"
+		AuthUserFile "/etc/apache2/claves/digest.txt"
 		Require user usuario01
-		AuthName "Indique usuario y contrasena"
-		AuthType Basic
+		AuthName "asir2"
+		AuthType Digest
 		#Require valid-user
 	</Directory>
 	ErrorLog ${APACHE_LOG_DIR}/error_pagina1.log
