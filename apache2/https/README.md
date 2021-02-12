@@ -99,8 +99,6 @@ SSLCertificateFile /etc/ssl/pagina1.crt
 
 ![crearUsuarios](../../imagenes/apache2/opcionesHttps.jpg)
 
-*Configuración*
-
 **Quitando comentarios y lineas en blanco**
 
 ```apache
