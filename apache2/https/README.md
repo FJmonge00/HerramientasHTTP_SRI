@@ -98,28 +98,23 @@ SSLCertificateFile /etc/ssl/pagina1.crt
 	ServerAdmin webmaster@localhost
 	DocumentRoot /var/www/pagina1
 	SSLEngine on
-	SSLCertificateFile /etc/ssl/pagina1.key
-	SSLCertificateKeyFile /etc/ssl/pagina1.crt
+	SSLCertificateFile	/etc/ssl/pagina1.crt
+	SSLCertificateKeyFile	/etc/ssl/pagina1.key
 	ErrorLog ${APACHE_LOG_DIR}/error_pagina1-ssl.log
 	CustomLog ${APACHE_LOG_DIR}/access_pagina1-ssl.log combined
+	# PARA REDIRECIONAMIENTO --> SI NO PIDE REDIRECCIONAMIENTO COMENTAR
+	RewriteEngine on
+	RewriteCond %{SERVER_NAME} =www.pagina1.org
+	RewriteRule ^https://%{SERVER_NAME}%{REQUEST_URI} [L,NE,R=permanent]
 </VirtualHost>
 
 # vim: syntax=apache ts=4 somprueba sintaxis
 ```
 
-
-### Activar sitio virtual apache2.conf
+### Activar sitio virtual
 
 ```bash
 a2ensite pagina1-ssl.conf
-```
-
-ó
-
-### Directamente en el sitio virtual
-
-```bash
-vi /etc/apache2/pagina1.conf
 ```
 
 *Reiniciamos el servicio*
@@ -130,74 +125,5 @@ systemctl restart apache2
 systemctl status apache2 
 ```
 
-## Configuraciones desde .htaccess
-
-### Crear htaccess
-
-```bash
-cd /var/www/pagina1/
-touch /var/www/pagina1/.htaccess
-chown -R www-data:www-data /var/www/pagina1/
-ls -lRa --color /var/www/pagina1/
-```
-
-### Indexes
-
-#### Permitir Indexes
-
-*renombramos el index.html para que no lo lea por defecto*
-
-```bash
-mv /var/www/pagina1/index.html /var/www/pagina1/index.tmp
-echo "Options Indexes" > /var/www/pagina1/.htaccess
-chown -R www-data:www-data /var/www/pagina1/
-ls -l /var/www/pagina1/index.*
-firefox http://www.pagina1.org/
-```
-*No es necesario recargar el servicio los cambios son desde el cliente*
-
-#### Denegar Indexes
-
-```bash
-echo "Options -Indexes" > /var/www/pagina1/.htaccess
-chown -R www-data:www-data /var/www/pagina1/
-firefox http://www.pagina1.org/
-```
-
-*No es necesario recargar el servicio los cambios son desde el cliente*
-
-***Comprobaciones:** *debe devolver un error 403 ó Forbidden*
-
-### Cliente modifica el sitio virtual: *Activa la autenticación*
-
-
-```bash
-echo 'AuthUserFile "/etc/apache2/claves/passwd.txt"' > /var/www/pagina1/.htaccess
-echo 'AuthName "Indroduce las claves:"' >> /var/www/pagina1/.htaccess
-echo 'AuthType Basic' >> /var/www/pagina1/.htaccess
-echo 'Require valid-user' >> /var/www/pagina1/.htaccess
-firefox http://www.pagina1.org/
-```
-*No es necesario recargar el servicio los cambios son desde el cliente*
-
-![crearUsuarios](../../imagenes/apache2/configDesdeClienteAcceso.jpg)
-
-*ES NECESARIO CREAR LOS USUARIOS EN CASO DE QUE NO EXISTA*
-
-```bash
-mkdir /etc/apache2/claves/
-htpasswd -c /etc/apache2/claves/passwd.txt usuario01 # Opción -c SOLO PARA CREAR EL FICHERO 1ª Vez
-htpasswd /etc/apache2/claves/passwd.txt usuario02
-```
-
-*Si no está instalado htpasswd...*
-
-```bash
-apt-get install apache2-utils
-```
-
-### Cliente modifica el sitio virtual: Deniega los archivos .tmp
-
-![crearUsuarios](../../imagenes/apache2/bloqueTMPCliente.jpg)
 __________________________
 *[Volver atrás...](/README.md)*
