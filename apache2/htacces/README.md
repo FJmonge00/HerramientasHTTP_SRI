@@ -26,7 +26,7 @@ Para permitir el uso de los ficheros .htaccess o restringir las directivas que s
 
 *Añadir:*
 
-`AllowOverride`
+`AllowOverride All`
 
 ### Activar en apache2.conf
 
@@ -58,7 +58,7 @@ systemctl status apache2
 ```bash
 cd /var/www/pagina1/
 touch /var/www/pagina1/.htaccess
-chown -R usuario:usuario /var/www/pagina1/
+chown -R www-data:www-data /var/www/pagina1/
 ls -lRa --color /var/www/pagina1/
 ```
 
@@ -69,7 +69,10 @@ ls -lRa --color /var/www/pagina1/
 *renombramos el index.html para que no lo lea por defecto*
 
 ```bash
+mv /var/www/pagina1/index.html /var/www/pagina1/index.tmp
 echo "Options Indexes" > /var/www/pagina1/.htaccess
+chown -R www-data:www-data /var/www/pagina1/
+ls -l /var/www/pagina1/index.*
 firefox http://www.pagina1.org/
 ```
 *No es necesario recargar el servicio los cambios son desde el cliente*
@@ -78,6 +81,7 @@ firefox http://www.pagina1.org/
 
 ```bash
 echo "Options -Indexes" > /var/www/pagina1/.htaccess
+chown -R www-data:www-data /var/www/pagina1/
 firefox http://www.pagina1.org/
 ```
 
