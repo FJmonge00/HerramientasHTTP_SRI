@@ -35,6 +35,13 @@ a2enmod ssl
 systemctl restart apache2 
 ```
 
+*EN CASO DE PEDIR REDIRRECCIONAMIENTO HTTP --> HTPPs...*
+
+```bash
+a2enmod rewrite
+systemctl restart apache2 
+```
+
 ## Generar pareja de claves (OpenSSL)
 
 ### Instalar OpenSSL
@@ -78,7 +85,9 @@ ls /etc/ssl
 
 ## Configuración del sitio virtual
 
+```apache
 cp /etc/apache2/sites-available/pagina1.conf /etc/apache2/sites-available/pagina1-ssl.conf
+```
 
 *Para activar Https esta es la configuración principal...*
 
@@ -91,7 +100,9 @@ SSLCertificateFile /etc/ssl/pagina1.crt
 ![crearUsuarios](../../imagenes/apache2/opcionesHttps.jpg)
 
 *Configuración*
-# DA ERROR
+
+**Quitando comentarios y lineas en blanco**
+
 ```apache
 <VirtualHost *:443>
 	ServerName www.pagina1.org
