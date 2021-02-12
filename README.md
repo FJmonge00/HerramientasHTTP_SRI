@@ -19,5 +19,5 @@
 ## [10.- Autenticación Básica.](./apache2/autenticacionBasica)
 ## [11.- Autenticación Digest.](./apache2/autenticacionDigest)
 ## [12.- Autenticación Compleja.](./apache2/autenticacionCompleja)
-## [13.- htacces.](./apache2/htacces)
+## [13.- Fichero htacces.](./apache2/htacces)
 ## [14.- Cargar Módulos (userdir y WebDav).](./apache2/CargarModulos)
