@@ -107,8 +107,8 @@ SSLCertificateFile /etc/ssl/pagina1.crt
 	ServerAdmin webmaster@localhost
 	DocumentRoot /var/www/pagina1
 	SSLEngine on
-	SSLCertificateFile	/etc/ssl/pagina1.crt
-	SSLCertificateKeyFile	/etc/ssl/pagina1.key
+	SSLCertificateFile	/etc/ssl/pagina1.key
+	SSLCertificateKeyFile	/etc/ssl/pagina1.crt
 	ErrorLog ${APACHE_LOG_DIR}/error_pagina1-ssl.log
 	CustomLog ${APACHE_LOG_DIR}/access_pagina1-ssl.log combined
 	# PARA REDIRECIONAMIENTO --> SI NO PIDE REDIRECCIONAMIENTO COMENTAR
