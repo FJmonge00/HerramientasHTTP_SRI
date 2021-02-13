@@ -1,6 +1,6 @@
 <img src="./imagenes/MI-LICENCIA88x31.png" style="float: left; margin-right: 10px;" />
 
-# Herramientas Servicio Web (Beta)
+# Herramientas Servicio Web
 ![logo apache](/imagenes/apacheLogo.png)
 
 ***Mi Topológia de red***
