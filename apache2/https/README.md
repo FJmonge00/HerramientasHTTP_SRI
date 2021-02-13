@@ -114,7 +114,7 @@ SSLCertificateFile /etc/ssl/pagina1.crt
 	# PARA REDIRECIONAMIENTO --> SI NO PIDE REDIRECCIONAMIENTO COMENTAR
 	RewriteEngine on
 	RewriteCond %{SERVER_NAME} =www.pagina1.org
-	RewriteRule ^https://%{SERVER_NAME}%{REQUEST_URI} [L,NE,R=permanent]
+	RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [L,NE,R=permanent]
 </VirtualHost>
 
 # vim: syntax=apache ts=4 somprueba sintaxis
